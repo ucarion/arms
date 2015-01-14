@@ -108,12 +108,6 @@ module Arms
       end
     end
 
-    class FleurDeLis < Element
-      def to_svg
-        Nokogiri::XML(load_path).root
-      end
-    end
-
     class OutlineElement < BackgroundElement
       def initialize
         super(:none)
@@ -131,7 +125,11 @@ module Arms
 
     class Ordinary < LineElement
     end
+
+    class Fur < Element
+    end
   end
 end
 
 require 'arms/elements/ordinaries'
+require 'arms/elements/furs'
