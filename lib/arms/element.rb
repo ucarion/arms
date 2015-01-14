@@ -98,7 +98,7 @@ module Arms
 
       def to_svg
         Nokogiri::XML::Builder.new do |xml|
-          xml.path(fill: color, stroke: stroke, stroke_width: stroke_width, d: path)
+          xml.path(fill: color, stroke: stroke, 'stroke-width' => stroke_width, d: path)
         end.doc.root
       end
     end
