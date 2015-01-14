@@ -125,7 +125,7 @@ module Arms
     class Ordinary < LineElement
       def load_path
         class_name = self.class.name.split('::').last
-        relative_path = File.join("../elements/ordinary_paths", class_name)
+        relative_path = File.join("../elements/paths", class_name)
         file_name = File.expand_path(relative_path, __FILE__)
 
         File.read(file_name)
