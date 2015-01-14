@@ -63,6 +63,13 @@ module Arms
       end
     end
 
+    class TripleChevron < Ordinary
+      def initialize(color)
+        super(color)
+        self.path = load_path
+      end
+    end
+
     class Bande < Ordinary
       def initialize(color)
         super(color)
@@ -92,6 +99,13 @@ module Arms
     end
 
     class Lozengy < Ordinary
+      def initialize(color)
+        super(color)
+        self.path = load_path
+      end
+    end
+
+    class Gyronny < Ordinary
       def initialize(color)
         super(color)
         self.path = load_path
