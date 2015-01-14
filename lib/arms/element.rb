@@ -133,8 +133,12 @@ module Arms
 
     class Fur < Element
     end
+
+    class Charge < LineElement
+    end
   end
 end
 
 require 'arms/elements/ordinaries'
 require 'arms/elements/furs'
+require 'arms/elements/charges'
