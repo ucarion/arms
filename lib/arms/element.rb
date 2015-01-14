@@ -16,6 +16,38 @@ module Arms
       end
     end
 
+    class Division < Element
+      def self.definitions
+        Nokogiri::XML::Builder.new do |xml|
+          xml.defs {
+            xml.clipPath(id: :per_pale_left) {
+              xml.rect(x: 0, y: 0, width: 300, height: 660)
+            }
+
+            xml.clipPath(id: :per_pale_right) {
+              xml.rect(x: 300, y: 0, width: 300, height: 660)
+            }
+          }
+        end.doc.root
+      end
+    end
+
+    class PaleLeft < Division
+      def to_svg
+        Nokogiri::XML::Builder.new do |xml|
+          xml.g('clip-path' => 'url(#per_pale_left)')
+        end.doc.root
+      end
+    end
+
+    class PaleRight < Division
+      def to_svg
+        Nokogiri::XML::Builder.new do |xml|
+          xml.g('clip-path' => 'url(#per_pale_right)')
+        end.doc.root
+      end
+    end
+
     class GlossElement < Element
       def to_svg
         gradient_parameters = {
