@@ -77,6 +77,13 @@ module Arms
       end
     end
 
+    class Pall < Ordinary
+      def initialize(color)
+        super(color)
+        self.path = load_path
+      end
+    end
+
     class Saltire < Ordinary
       def initialize(color)
         super(color)
