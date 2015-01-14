@@ -9,8 +9,13 @@ module Arms
 
       def load_path
         class_name = self.class.name.split('::').last
-        relative_path = File.join("../elements/paths", class_name)
-        file_name = File.expand_path(relative_path, __FILE__)
+
+        load_asset(class_name)
+      end
+
+      def load_asset(asset_name)
+        path = File.join('../elements/assets', asset_name)
+        file_name = File.expand_path(path, __FILE__)
 
         File.read(file_name).strip
       end
