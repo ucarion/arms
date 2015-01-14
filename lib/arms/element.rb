@@ -6,6 +6,14 @@ module Arms
       def to_svg
         raise NotImplementedError
       end
+
+      def load_path
+        class_name = self.class.name.split('::').last
+        relative_path = File.join("../elements/paths", class_name)
+        file_name = File.expand_path(relative_path, __FILE__)
+
+        File.read(file_name)
+      end
     end
 
     class RootElement < Element
@@ -59,7 +67,7 @@ module Arms
           gradientUnits: 'userSpaceOnUse'
         }
 
-        gloss_path = "M299.714,658.864c0,0,298.5-112.32,298.5-397.772s0-258.552,0-258.552h-597v258.552 C1.214,546.543,299.714,658.864,299.714,658.864z"
+        gloss_path = load_path
 
         Nokogiri::XML::Builder.new do |xml|
           xml.g {
@@ -87,14 +95,6 @@ module Arms
         Nokogiri::XML::Builder.new do |xml|
           xml.path(fill: color, stroke: stroke, stroke_width: stroke_width, d: path)
         end.doc.root
-      end
-
-      def load_path
-        class_name = self.class.name.split('::').last
-        relative_path = File.join("../elements/paths", class_name)
-        file_name = File.expand_path(relative_path, __FILE__)
-
-        File.read(file_name)
       end
     end
 
