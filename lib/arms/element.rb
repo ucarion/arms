@@ -123,13 +123,6 @@ module Arms
       end
     end
 
-    class Lozengy < LineElement
-      def initialize(color)
-        super(color)
-        self.path = load_path
-      end
-    end
-
     class Ordinary < LineElement
     end
   end

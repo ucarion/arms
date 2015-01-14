@@ -83,5 +83,12 @@ module Arms
         self.path = load_path
       end
     end
+
+    class Lozengy < Ordinary
+      def initialize(color)
+        super(color)
+        self.path = load_path
+      end
+    end
   end
 end
