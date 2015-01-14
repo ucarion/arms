@@ -12,7 +12,7 @@ module Arms
         relative_path = File.join("../elements/paths", class_name)
         file_name = File.expand_path(relative_path, __FILE__)
 
-        File.read(file_name)
+        File.read(file_name).strip
       end
     end
 
@@ -105,6 +105,12 @@ module Arms
         self.path = load_path
         self.stroke = '#000000'
         self.stroke_width = 3
+      end
+    end
+
+    class FleurDeLis < Element
+      def to_svg
+        Nokogiri::XML(load_path).root
       end
     end
 
