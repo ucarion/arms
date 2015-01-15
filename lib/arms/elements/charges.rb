@@ -21,5 +21,17 @@ module Arms
         Nokogiri::XML(xml_data).root
       end
     end
+
+    class Sword < Charge
+      def initialize(grip_color)
+        @grip_color = grip_color
+      end
+
+      def to_svg
+        xml_data = load_asset('Sword').gsub('{{GRIP_COLOR}}', @grip_color)
+
+        Nokogiri::XML(xml_data).root
+      end
+    end
   end
 end
