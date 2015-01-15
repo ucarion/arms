@@ -11,5 +11,8 @@ module Arms
 
     class Lion < ColorElement
     end
+
+    class FleurDeLisFull < ColorElement
+    end
   end
 end
