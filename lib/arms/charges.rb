@@ -14,5 +14,16 @@ module Arms
 
     class FleurDeLisFull < ColorElement
     end
+
+    class FleurDeLisMedium < Struct.new(:color, :position)
+      def translation
+        case position
+        when :pale_left
+          "translate(-150, 0)"
+        when :pale_right
+          "translate(150, 0)"
+        end
+      end
+    end
   end
 end

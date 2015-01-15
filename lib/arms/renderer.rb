@@ -13,7 +13,11 @@ module Arms
         data = fetch_svg_template(element.class.name)
 
         element.members.each do |key|
-          data.gsub!("{{#{key.upcase}}}", element[key])
+          if key == :position
+            data.gsub!("{{TRANSLATION}}", element.translation)
+          else
+            data.gsub!("{{#{key.upcase}}}", element[key])
+          end
         end
 
         data
