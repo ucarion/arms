@@ -21,6 +21,9 @@ module Arms
     class Cross < ColorElement
     end
 
+    class PerCross < ColorElement
+    end
+
     class Chevron < ColorElement
     end
 
