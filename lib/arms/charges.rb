@@ -39,5 +39,8 @@ module Arms
 
     class Anchor < ColorElement
     end
+
+    class Flower < ColorElement
+    end
   end
 end
