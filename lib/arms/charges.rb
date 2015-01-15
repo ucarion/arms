@@ -33,5 +33,8 @@ module Arms
         end
       end
     end
+
+    class Tower < ColorElement
+    end
   end
 end
