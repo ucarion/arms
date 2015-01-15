@@ -33,5 +33,17 @@ module Arms
         Nokogiri::XML(xml_data).root
       end
     end
+
+    class Lion < Charge
+      def initialize(color)
+        @color = color
+      end
+
+      def to_svg
+        xml_data = load_asset('Lion').gsub('{{COLOR}}', @color)
+
+        Nokogiri::XML(xml_data).root
+      end
+    end
   end
 end
