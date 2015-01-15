@@ -1,6 +1,6 @@
 module Arms
   module Element
-    class FleurDeLis < SimpleElement
+    class FleurDeLisFur < SimpleElement
     end
 
     class Ermine < SimpleElement
