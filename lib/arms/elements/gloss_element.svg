@@ -1,0 +1,9 @@
+<g>
+  <radialGradient id="Gloss_1_1" cx="218.5737" cy="323.3716" r="300" gradientTransform="matrix(1.3532 0 0 1.3489 -74.031 -216.2625)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:0.3137"/>
+    <stop offset="0.19" style="stop-color:#FFFFFF;stop-opacity:0.251"/>
+    <stop offset="0.6" style="stop-color:#6B6B6B;stop-opacity:0.1255"/>
+    <stop offset="1" style="stop-color:#000000;stop-opacity:0.1255"/>
+  </radialGradient>
+  <path fill="url(#Gloss_1_1)" d="M299.714,658.864c0,0,298.5-112.32,298.5-397.772s0-258.552,0-258.552h-597v258.552 C1.214,546.543,299.714,658.864,299.714,658.864z"/>
+</g>

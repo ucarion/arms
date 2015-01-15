@@ -1,0 +1,8 @@
+<defs>
+  <clipPath id="per_pale_left">
+    <rect x="0" y="0" width="300" height="660"/>
+  </clipPath>
+  <clipPath id="per_pale_right">
+    <rect x="300" y="0" width="300" height="660"/>
+  </clipPath>
+</defs>
