@@ -111,5 +111,17 @@ module Arms
         self.path = load_path
       end
     end
+
+    class Fret < Ordinary
+      def initialize(color)
+        self.color = color
+      end
+
+      def to_svg
+        xml_data = load_asset('Fret').gsub('{{COLOR}}', self.color)
+
+        Nokogiri::XML(xml_data).root
+      end
+    end
   end
 end
