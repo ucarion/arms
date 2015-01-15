@@ -36,5 +36,8 @@ module Arms
 
     class Tower < ColorElement
     end
+
+    class Anchor < ColorElement
+    end
   end
 end
