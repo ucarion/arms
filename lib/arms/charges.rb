@@ -42,5 +42,8 @@ module Arms
 
     class Flower < ColorElement
     end
+
+    class Hand < ColorElement
+    end
   end
 end
