@@ -48,5 +48,8 @@ module Arms
 
     class Seashell < ColorElement
     end
+
+    class Star < ColorElement
+    end
   end
 end
