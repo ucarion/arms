@@ -15,23 +15,7 @@ module Arms
     class FleurDeLisFull < ColorElement
     end
 
-    class FleurDeLisMedium < Struct.new(:color, :position)
-      def translation
-        case position
-        when :pale_left
-          "translate(-150, 0)"
-        when :pale_right
-          "translate(150, 0)"
-        when :cross_top_left
-          "translate(-150, -130)"
-        when :cross_top_right
-          "translate(150, -130)"
-        when :cross_bottom_left
-          "translate(-130, 170)"
-        when :cross_bottom_right
-          "translate(130, 170)"
-        end
-      end
+    class FleurDeLisMedium < PositionedColorElement
     end
 
     class Tower < ColorElement
@@ -52,7 +36,7 @@ module Arms
     class Star < ColorElement
     end
 
-    class Heart < ColorElement
+    class Heart < PositionedColorElement
     end
   end
 end

@@ -8,10 +8,49 @@ module Arms
       end
     end
 
-    class ColorElement < Struct.new(:color)
+    class ColorElement
+      attr_accessor :color
+
+      def initialize(color)
+        self.color = color
+      end
+
+      def members
+        [:color]
+      end
     end
 
+    class PositionedColorElement
+      attr_accessor :color, :position
 
+      def members
+        [:color, :position]
+      end
+
+      def initialize(color, position = :center)
+        self.color = color
+        self.position = position
+      end
+
+      def translation
+        case position
+        when :center
+          "translate(0, 0)"
+        when :pale_left
+          "translate(-150, 0)"
+        when :pale_right
+          "translate(150, 0)"
+        when :cross_top_left
+          "translate(-150, -130)"
+        when :cross_top_right
+          "translate(150, -130)"
+        when :cross_bottom_left
+          "translate(-130, 170)"
+        when :cross_bottom_right
+          "translate(130, 170)"
+        end
+      end
+    end
 
     class RootElement < SimpleElement
     end

@@ -16,7 +16,7 @@ module Arms
           if key == :position
             data.gsub!("{{TRANSLATION}}", element.translation)
           else
-            data.gsub!("{{#{key.upcase}}}", element[key])
+            data.gsub!("{{#{key.upcase}}}", element.send(key))
           end
         end
 
