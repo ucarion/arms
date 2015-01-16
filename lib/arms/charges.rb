@@ -45,5 +45,8 @@ module Arms
 
     class Hand < ColorElement
     end
+
+    class Seashell < ColorElement
+    end
   end
 end
