@@ -51,5 +51,8 @@ module Arms
 
     class Star < ColorElement
     end
+
+    class Heart < ColorElement
+    end
   end
 end
