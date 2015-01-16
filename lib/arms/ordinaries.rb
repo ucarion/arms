@@ -1,5 +1,8 @@
 module Arms
   module Element
+    class Bordure < ColorElement
+    end
+
     class Fess < ColorElement
     end
 
@@ -33,7 +36,7 @@ module Arms
     class TripleChevron < ColorElement
     end
 
-    class Bande < ColorElement
+    class Bend < ColorElement
     end
 
     class Barre < ColorElement
