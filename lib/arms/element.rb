@@ -36,10 +36,12 @@ module Arms
         case position
         when :center
           "translate(0, 0)"
+
         when :pale_left
           "translate(-150, 0)"
         when :pale_right
           "translate(150, 0)"
+
         when :cross_top_left
           "translate(-150, -130)"
         when :cross_top_right
@@ -48,6 +50,13 @@ module Arms
           "translate(-130, 170)"
         when :cross_bottom_right
           "translate(130, 170)"
+
+        when :chevron_top_left
+          "translate(-150, -130)"
+        when :chevron_top_right
+          "translate(150, -130)"
+        when :chevron_bottom
+          "translate(0, 170)"
         end
       end
     end

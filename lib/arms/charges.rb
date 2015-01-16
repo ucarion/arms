@@ -24,16 +24,16 @@ module Arms
     class Anchor < ColorElement
     end
 
-    class Flower < ColorElement
+    class Flower < PositionedColorElement
     end
 
-    class Hand < ColorElement
+    class Hand < PositionedColorElement
     end
 
-    class Seashell < ColorElement
+    class Seashell < PositionedColorElement
     end
 
-    class Star < ColorElement
+    class Star < PositionedColorElement
     end
 
     class Heart < PositionedColorElement
