@@ -6,6 +6,9 @@ module Arms
     class Fess < ColorElement
     end
 
+    class FessDancetty < ColorElement
+    end
+
     class Fess10 < ColorElement
     end
 
