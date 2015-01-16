@@ -8,5 +8,8 @@ module Arms
     PURPURE = '#965478'
     SABLE = '#050505'
     VERT = '#139415'
+
+    METALS = [OR, ARGENT]
+    COLORS = [AZURE, GULES, PURPURE, SABLE, VERT]
   end
 end

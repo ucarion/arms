@@ -52,11 +52,11 @@ module Arms
           "translate(130, 170)"
 
         when :chevron_top_left
-          "translate(-150, -130)"
+          "translate(-170, -130)"
         when :chevron_top_right
-          "translate(150, -130)"
+          "translate(170, -130)"
         when :chevron_bottom
-          "translate(0, 170)"
+          "translate(0, 200)"
         end
       end
     end
