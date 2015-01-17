@@ -38,5 +38,8 @@ module Arms
 
     class Heart < PositionedColorElement
     end
+
+    class Lozenge < ColorElement
+    end
   end
 end
